@@ -1,26 +1,48 @@
 <script setup lang="ts">
-// import FccButton from './components/FccButton.vue'
-import { FccButton } from 'test-component-lib'
-import "test-component-lib/style.css"
+import ImageText from './components/ImageText.vue'
+import ImageTextCoordinate from "./components/ImageTextCoordinate.vue";
 </script>
-
 <template>
-  <FccButton text="Run the Tests" />
+  <div id="app">
+    <div class="wrapper">
+      <ImageText
+          imageSrc="sample.jpeg"
+          text="Mt Everest (8848m)"
+          position="bottom-left"
+          text-size="14px"
+      />
+      <ImageTextCoordinate
+          image-src="sample.jpeg"
+          text="Mt Everest (8848m)"
+          text-size="14px"
+          image_x_coordinate="27"
+          image_y_coordinate="83"
+      />
+    </div>
+  </div>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+#app {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
 }
 </style>

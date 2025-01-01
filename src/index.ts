@@ -1,3 +1,4 @@
-import FccButton from "./components/FccButton.vue";
+import ImageText from "./components/ImageText.vue";
+import ImageTextCoordinate from "./components/ImageTextCoordinate.vue";
 
-export { FccButton };
+export { ImageText, ImageTextCoordinate };

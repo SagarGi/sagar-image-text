@@ -1,14 +1,14 @@
 {
-  "name": "brian-component-lib",
-  "version": "1.0.0",
+  "name": "sagar-image-text",
+  "version": "1.0.3",
   "type": "module",
   "files": ["dist"],
-  "main": "./dist/brian-component-lib.umd.cjs",
-  "module": "./dist/brian-component-lib.js",
+  "main": "./dist/sagar-image-text.umd.cjs",
+  "module": "./dist/sagar-image-text.js",
   "exports": {
     ".": {
-      "import": "./dist/brian-component-lib.js",
-      "require": "./dist/brian-component-lib.umd.cjs"
+      "import": "./dist/sagar-image-text.js",
+      "require": "./dist/sagar-image-text.umd.cjs"
     },
     "./style.css": "./dist/style.css"
   },

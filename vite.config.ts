@@ -9,9 +9,9 @@ export default defineConfig({
     lib: {
       // Could also be a dictionary or array of multiple entry points
       entry: resolve(__dirname, "src/index.ts"),
-      name: "BrianComponentLibrary",
+      name: "SagarImageText",
       // the proper extensions will be added
-      fileName: "brian-component-lib",
+      fileName: "sagar-image-text",
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
