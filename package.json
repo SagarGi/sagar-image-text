@@ -1,6 +1,6 @@
 {
   "name": "sagar-image-text",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Sagar Gurung <sagargurung1001@gmail.com>",
   "type": "module",
   "files": [
@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/SagarGi/sagar-text-image/issues"
   },
-  "homepage": "https://sagargi.github.io/sag-text-image/#/",
+  "homepage": "https://sagargi.github.io/sagar-text-image/",
   "main": "./dist/sagar-image-text.umd.cjs",
   "module": "./dist/sagar-image-text.js",
   "exports": {
@@ -34,7 +34,7 @@
   "scripts": {
     "dev": "vite",
     "build-lib": "vite build --mode lib && vue-tsc --emitDeclarationOnly",
-    "build-docs": "vite build --mode docs",
+    "build-docs": "vite build --mode docs && vue-tsc --emitDeclarationOnly",
     "build": "pnpm build-lib && pnpm build-docs",
     "types": "vue-tsc ",
     "preview": "vite preview"
