@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import ImageText from './components/ImageText.vue'
-import ImageTextCoordinate from "./components/ImageTextCoordinate.vue";
+import {ImageText, ImageTextCoordinate } from "sagar-image-text";
 </script>
 <template>
   <div id="app">

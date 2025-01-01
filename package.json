@@ -33,11 +33,14 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "build-lib": "vite build --mode lib && vue-tsc --emitDeclarationOnly",
+    "build-docs": "vite build --mode docs",
+    "build": "pnpm build-lib && pnpm build-docs",
     "types": "vue-tsc ",
     "preview": "vite preview"
   },
   "dependencies": {
+    "sagar-image-text": "^1.0.4",
     "vue": "^3.2.47",
     "vue-tsc": "^2.2.0"
   },
