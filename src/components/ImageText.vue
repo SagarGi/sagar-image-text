@@ -1,5 +1,5 @@
 <template>
-  <div class="image-container" :style="{ position: 'relative', width: imageWidth, height: imageHeight }">
+  <div class="image-container" :style="imageStyle">
     <img :src="imageSrc" alt="Image" class="background-image" />
     <p :style="textStyle">{{ text }}</p>
   </div>
@@ -15,6 +15,14 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    imageWidth: {
+      type: String,
+      default: '100%',
+    },
+    imageHeight: {
+      type: String,
+      default: 'auto',
+    },
     text: {
       type: String,
       required: true,
@@ -27,21 +35,14 @@ export default defineComponent({
       type: String,
       default: '10px',
     },
-    position: {
+    textPosition: {
       type: String as PropType<
         'top-left' | 'top-right' | 'top-center' | 'bottom-left' | 'bottom-right' | 'bottom-center' | 'center'
       >,
       default: 'center',
+      required: true,
     },
-    imageWidth: {
-      type: [String, Number] as PropType<string | number>,
-      default: '100%',
-    },
-    imageHeight: {
-      type: [String, Number] as PropType<string | number>,
-      default: 'auto',
-    },
-    backgroundColor: {
+    textBackgroundColor: {
       type: String,
       default: 'rgba(0, 0, 0, 0.5)', // Default background color
     },
@@ -58,19 +59,26 @@ export default defineComponent({
         'center': { top: '50%', left: '50%', transform: 'translate(-50%, -50%)' },
       };
 
-      const positionStyle = positionMap[props.position] || positionMap['top-left'];
+      const positionStyle = positionMap[props.textPosition] || positionMap['top-left'];
 
       return {
         position: 'absolute',
         ...positionStyle,
         color: props.textColor,
         fontSize: props.textSize,
-        backgroundColor: props.backgroundColor,
+        backgroundColor: props.textBackgroundColor,
         padding: '4px 15px 4px 15px',
       } as CSSProperties; // Explicit cast here
     });
+    const imageStyle = computed<CSSProperties>(() => {
+      return {
+        position: 'relative',
+        width: props.imageWidth,
+        height: props.imageHeight
+      } as CSSProperties;
 
-    return { textStyle };
+    })
+    return { textStyle, imageStyle };
   },
 });
 </script>

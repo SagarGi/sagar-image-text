@@ -1,8 +1,26 @@
 {
   "name": "sagar-image-text",
-  "version": "1.0.3",
+  "version": "1.0.4",
+  "author": "Sagar Gurung <sagargurung1001@gmail.com>",
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "vue",
+    "vue3",
+    "image",
+    "tex-image",
+    "library"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SagarGi/sag-text-image"
+  },
+  "bugs": {
+    "url": "https://github.com/SagarGi/sagar-text-image/issues"
+  },
+  "homepage": "https://sagargi.github.io/sag-text-image/#/",
   "main": "./dist/sagar-image-text.umd.cjs",
   "module": "./dist/sagar-image-text.js",
   "exports": {
@@ -21,13 +39,12 @@
   },
   "dependencies": {
     "vue": "^3.2.47",
-    "test-component-lib": "file:../test-component-lib"
+    "vue-tsc": "^2.2.0"
   },
   "devDependencies": {
     "@types/node": "^20.2.5",
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
-    "vite": "^4.3.9",
-    "vue-tsc": "^1.4.2"
+    "vite": "^4.3.9"
   }
 }

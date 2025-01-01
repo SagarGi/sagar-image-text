@@ -1,11 +1,8 @@
 <template>
-  <div class="text-on-image-container">
-    <img :src="imageSrc" alt="dynamic image" />
-    <div
-        class="text-overlay"
-        :style="textStyle"
-        v-text="text"
-    >
+  <div class="image-container" :style="imageStyle">
+    <div class="image-container" :style="imageStyle">
+      <img :src="imageSrc" alt="Image" class="background-image" />
+      <p :style="textStyle">{{ text }}</p>
     </div>
   </div>
 </template>
@@ -20,16 +17,24 @@ export default defineComponent({
       type: String,
       required: true,
     },
+    imageWidth: {
+      type: String,
+      default: '100%',
+    },
+    imageHeight: {
+      type: String,
+      default: 'auto',
+    },
     text: {
       type: String,
       required: true,
     },
     image_x_coordinate: {
-      type: String,
+      type: Number,
       default: 50,
     },
     image_y_coordinate: {
-      type: String,
+      type: Number,
       default: 50,
     },
     textAlign: {
@@ -39,7 +44,7 @@ export default defineComponent({
     textBackgroundWidth: {
       type: Number,
     },
-    textFontColor: {
+    textColor: {
       type: String,
       default: 'white', // Default font color
     },
@@ -47,7 +52,7 @@ export default defineComponent({
       type: String,
       default: 10, // Default font size
     },
-    backgroundColor: {
+    textBackgroundColor: {
       type: String,
       default: 'rgba(0, 0, 0, 0.5)', // Default background color
     },
@@ -63,40 +68,47 @@ export default defineComponent({
 
     const textStyle = computed<CSSProperties>(() => {
       return {
+        position: 'absolute',
         left: `${constrainedXImageCoordinate.value}%`,
         top: `${constrainedYImageCoordinate.value}%`,
-        transform: 'translate(-50%, -50%)', // Centers the text at the given coordinates
-        textAlign: props.textAlign as CSSProperties['textAlign'], // Explicitly cast textAlign
-        width: `${props.textBackgroundWidth}%`, // Fit against the image width
-        color: props.textFontColor,
-        backgroundColor: props.backgroundColor, // Dynamic background color
+        transform: 'translate(-50%, -50%)',
+        textAlign: props.textAlign as CSSProperties['textAlign'],
+        width: `${props.textBackgroundWidth}%`,
+        color: props.textColor,
+        backgroundColor: props.textBackgroundColor,
         fontSize: props.textSize,
         padding: '4px 15px 4px 15px',
       };
     });
 
+    const imageStyle = computed<CSSProperties>(() => {
+      return {
+        position: 'relative',
+        width: props.imageWidth,
+        height: props.imageHeight
+      } as CSSProperties;
+
+    })
+
     return {
       constrainedXImageCoordinate,
       constrainedYImageCoordinate,
       textStyle,
+      imageStyle
     };
   },
 });
 </script>
 
 <style scoped>
-.text-on-image-container {
-  position: relative;
-  display: inline-block;
-}
-.image {
-  display: block;
+.image-container {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-.text-overlay {
-  position: absolute;
-  pointer-events: none;
-  white-space: wrap;
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 </style>

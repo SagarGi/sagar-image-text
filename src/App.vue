@@ -8,7 +8,7 @@ import ImageTextCoordinate from "./components/ImageTextCoordinate.vue";
       <ImageText
           imageSrc="sample.jpeg"
           text="Mt Everest (8848m)"
-          position="bottom-left"
+          text-position="bottom-left"
           text-size="14px"
       />
       <ImageTextCoordinate
@@ -16,7 +16,7 @@ import ImageTextCoordinate from "./components/ImageTextCoordinate.vue";
           text="Mt Everest (8848m)"
           text-size="14px"
           image_x_coordinate="27"
-          image_y_coordinate="83"
+          image_y_coordinate="75"
       />
     </div>
   </div>
