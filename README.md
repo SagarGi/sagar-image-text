@@ -13,5 +13,84 @@
 </a>
 </p>
 
-## Documentation
-To be provided :/
+##  1. Library usage example
+
+https://sagargi.github.io/sagar-text-image
+
+## 2. Installation
+
+SagarTextImage is available on NPM. You can install it using the following command:
+
+```
+npm install sagar-text-image
+```
+After installing the package, you import and directly use it on you vue code as:
+
+```javascript
+import { ImageText, ImageTextCoordinate } from "sagar-image-text";
+import 'sagar-image-text/style.css'
+```
+
+## 3. Getting Started
+Here is the minimal example:
+
+This is the example of component `ImageText` which is very basic.
+```javascript
+<template>
+  <div class="wrapper">
+      <ImageText
+          image-src="<path-to-image>"
+          text="Your text here"
+          text-position="bottom-left"
+      />
+  </div>
+</template>
+```
+
+Also, here is an example of component `ImageTextCoordinate` which is more flexible than `ImageText`
+
+```javascript
+<template>
+  <div class="wrapper">
+      <ImageTextCoordinate
+          image-src="<path-to-image>"
+          text="Your text here"
+          image_x_coordinate="50"
+          image_y_coordinate="50"
+      />
+  </div>
+</template>
+```
+
+## 4. Props
+Component `ImageText` has the following props:
+
+| Prop        | Type          | Default      | Description                                                                                                  |
+|-------------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
+| `imageSrc` | `String`      | `required`   | Path of the image.                                                                                           |
+| `imageWidth` | `String`      | `100%`       | Width of the image.                                                                                          |
+| `imageHeight` | `String`     | `auto`       | Height of the image.                                                                                         |
+| `text` | `String`       | `your text here` | Text you want to display.                                                                                    |
+| `textColor` | `String`      | `white`      | Color of the text on image.                                                                                  |
+| `textSize` | `String`     | `10px`       | Font size of the text on image.                                                                              |
+| `textPosition` | `String`       | `center`           | Position to keep the text. (top-left, top-right,top-center,bottom-left,bottom-right, bottom-center, center ) |
+| `textBackgroundColor` | `String`      | `rgba(0, 0, 0, 0.5)`           | Background of the text                                                                                       |
+
+
+Component `ImageTextCoordinate` has same props as above but with extra props as:
+
+
+| Prop        | Type          | Default | Description                                                  |
+|-------------|---------------|----|--------------------------------------------------------------|
+| `image_x_coordinate` | `Number`      | `50` | x-positon to place the text on image.                        |
+| `image_y_coordinate` | `Number`      | `50` | xypositon to place the text on image.                        |
+| `textAlign` | `String`     | `center` | Also allows to align the position of the text on an overlay. |
+| `textBackgroundWidth` | `Number`     |    | Width of the text background.                                |
+
+
+
+
+
+
+
+

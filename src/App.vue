@@ -37,10 +37,11 @@ import { ImageText, ImageTextCoordinate } from "sagar-image-text";
 
       <!-- Image Text Coordinate Wrapper -->
       <div class="image-text-coordinate-wrapper">
-        <ImageText
+        <ImageTextCoordinate
             image-src="sample.jpeg"
             text="Single Image with Text"
-            text-position="center"
+            image_x_coordinate=""
+            image_y_coordinate=""
         />
       </div>
     </div>
