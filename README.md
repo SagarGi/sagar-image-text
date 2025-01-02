@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="src/assets/sit.svg" width="80">
+	<img src="docs/sit.svg" width="80">
 </p>
 <h1 align=center>Sagar Image Text</h1>
 <p align=center>Make your Text on Image Easier</p>
