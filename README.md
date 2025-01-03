@@ -65,16 +65,20 @@ Also, here is an example of component `ImageTextCoordinate` which is more flexib
 ## 4. Props
 Component `ImageText` has the following props:
 
-| Prop        | Type          | Default      | Description                                                                                                  |
-|-------------|---------------|--------------|--------------------------------------------------------------------------------------------------------------|
-| `imageSrc` | `String`      | `required`   | Path of the image.                                                                                           |
-| `imageWidth` | `String`      | `100%`       | Width of the image.                                                                                          |
-| `imageHeight` | `String`     | `auto`       | Height of the image.                                                                                         |
-| `text` | `String`       | `your text here` | Text you want to display.                                                                                    |
-| `textColor` | `String`      | `white`      | Color of the text on image.                                                                                  |
-| `textSize` | `String`     | `10px`       | Font size of the text on image.                                                                              |
-| `textPosition` | `String`       | `center`           | Position to keep the text. (top-left, top-right,top-center,bottom-left,bottom-right, bottom-center, center ) |
-| `textBackgroundColor` | `String`      | `rgba(0, 0, 0, 0.5)`           | Background of the text                                                                                       |
+| Prop        | Type          | Default              | Description                                                                                                  |
+|-------------|---------------|----------------------|--------------------------------------------------------------------------------------------------------------|
+| `imageSrc` | `String`      | `required`           | Path of the image.                                                                                           |
+| `imageWidth` | `String`      | `100%`               | Width of the image.                                                                                          |
+| `imageHeight` | `String`     | `auto`               | Height of the image.                                                                                         |
+| `text` | `String`       | `your text here`     | Text you want to display.                                                                                    |
+| `textColor` | `String`      | `white`              | Color of the text on image.                                                                                  |
+| `textSize` | `String`     | `10px`               | Font size of the text on image.                                                                              |
+| `textPosition` | `String`       | `center`             | Position to keep the text. (top-left, top-right,top-center,bottom-left,bottom-right, bottom-center, center ) |
+| `textBackgroundColor` | `String`      | `rgba(0, 0, 0, 0.5)` | Background of the text                                                                                       |
+| `imageBorderRadius` | `String`      | `0px`                | Color of the text on image.                                                                                  |
+| `textFontStyle` | `String`      | `Arial, Helvetica, sans-serif;`              | Color of the text on image.                                                                                  |
+| `textFontFamily` | `String`      | `normal`              | Color of the text on image.                                                                                  |
+
 
 
 Component `ImageTextCoordinate` has same props as above but with extra props as:

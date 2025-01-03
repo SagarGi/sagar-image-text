@@ -28,6 +28,8 @@ import "sagar-image-text/style.css";
                 text="Village View"
                 text-position="center"
                 text-size="18px"
+                image-border-radius="10px"
+                text-font-family="Arial, Helvetica, sans-serif"
             />
             <ImageText
                 class="image-text-component"
@@ -35,13 +37,18 @@ import "sagar-image-text/style.css";
                 text="Mountain View"
                 text-position="top-right"
                 text-size="18px"
+                image-border-radius="10px"
+                text-font-family="Arial, Helvetica, sans-serif"
+
             />
             <ImageText
                 class="image-text-component"
                 image-src="sample3.jpg"
                 text="Pashupatinath Temple"
                 text-position="bottom-center"
-                text-size="16px"
+                text-size="14px"
+                image-border-radius="10px"
+                text-font-family="Arial, Helvetica, sans-serif"
             />
           </div>
         </div>
@@ -59,8 +66,10 @@ import "sagar-image-text/style.css";
                 image_x_coordinate="50"
                 image_y_coordinate="79"
                 text-background-width="90"
-                image-width="300px"
-                image-height="150px"
+                image-width="80%"
+                image-height="250px"
+                image-border-radius="10px"
+                text-font-family="Arial, Helvetica, sans-serif"
             />
             <ImageTextCoordinate
                 class="image-text-component"
@@ -69,8 +78,10 @@ import "sagar-image-text/style.css";
                 text-size="18px"
                 image_x_coordinate="50"
                 text-background-width="90"
-                image-width="300px"
-                image-height="150px"
+                image-width="80%"
+                image-height="250px"
+                image-border-radius="10px"
+                text-font-family="Arial, Helvetica, sans-serif"
             />
           </div>
         </div>
@@ -80,13 +91,11 @@ import "sagar-image-text/style.css";
 </template>
 
 <style scoped>
-
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden; /* Prevent scrollbars */
 }
 
 #app {
@@ -94,12 +103,12 @@ html, body {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh; /* Ensure full viewport height */
+  min-height: 100vh;
 }
 
 .centered-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
   width: 90%;
   max-width: 1200px;
@@ -108,8 +117,8 @@ html, body {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
+  box-sizing: border-box;
   text-align: center;
-  box-sizing: border-box; /* Ensures border and padding are included in dimensions */
 }
 
 .introduction-section h1 {
@@ -122,12 +131,13 @@ html, body {
 
 .introduction-section p {
   font-family: "Roboto", sans-serif;
-  font-size: 15px;
+  font-size: clamp(0.9rem, 3vw, 1rem);
   color: #ffffff;
   line-height: 1.6;
-  margin: 20px auto ;
+  margin: 20px auto;
   background: #09502b;
-  width: 40%;
+  width: 80%;
+  max-width: 600px;
   padding: 15px;
   border-radius: 10px;
 }
@@ -135,10 +145,6 @@ html, body {
 h3 {
   font-family: "Roboto", sans-serif;
   color: #5d5d5d;
-}
-
-.component {
-  color: #000000;
 }
 
 .npm-install-div {
@@ -163,6 +169,37 @@ h3 {
   max-width: 400px;
   min-width: 280px;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .image-text-component {
+    flex: 1 1 calc(50% - 20px);
+    max-width: none;
+  }
+
+  .introduction-section p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-text-component {
+    flex: 1 1 100%;
+  }
+
+  .npm-install-div {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .introduction-section h1 {
+    font-size: 1.5rem;
+  }
+
+  .introduction-section p {
+    font-size: 0.8rem;
+    padding: 10px;
+  }
 }
 </style>
 

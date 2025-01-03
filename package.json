@@ -1,6 +1,6 @@
 {
   "name": "sagar-image-text",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "author": "Sagar Gurung <sagargurung1001@gmail.com>",
   "type": "module",
   "files": [
@@ -40,7 +40,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "sagar-image-text": "^1.0.4",
+    "sagar-image-text": "^1.0.7",
     "vue": "^3.2.47",
     "vue-tsc": "^2.2.0"
   },

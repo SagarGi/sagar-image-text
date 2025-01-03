@@ -1,6 +1,6 @@
 <template>
-  <div class="image-container" :style="imageStyle">
-    <img :src="imageSrc" alt="Image" class="background-image" />
+  <div class="image-container" :style="imageContainerStyle">
+    <img :src="imageSrc" alt="Image" class="background-image" :style="{ borderRadius: imageBorderRadius }" />
     <p :style="textStyle">{{ text }}</p>
   </div>
 </template>
@@ -23,6 +23,10 @@ export default defineComponent({
       type: String,
       default: 'auto',
     },
+    imageBorderRadius: {
+      type: String,
+      default: '0', // Default to no border radius
+    },
     text: {
       type: String,
       required: true,
@@ -30,6 +34,14 @@ export default defineComponent({
     textColor: {
       type: String,
       default: 'white',
+    },
+    textFontStyle: {
+      type: String,
+      default: 'normal',
+    },
+    textFontFamily: {
+      type: String,
+      default: 'Arial, Helvetica, sans-serif;',
     },
     textSize: {
       type: String,
@@ -68,9 +80,11 @@ export default defineComponent({
         fontSize: props.textSize,
         backgroundColor: props.textBackgroundColor,
         padding: '4px 15px 4px 15px',
+        fontStyle: props.textFontStyle,
+        fontFamily: props.textFontFamily
       } as CSSProperties; // Explicit cast here
     });
-    const imageStyle = computed<CSSProperties>(() => {
+    const imageContainerStyle = computed<CSSProperties>(() => {
       return {
         position: 'relative',
         width: props.imageWidth,
@@ -78,7 +92,7 @@ export default defineComponent({
       } as CSSProperties;
 
     })
-    return { textStyle, imageStyle };
+    return { textStyle, imageContainerStyle };
   },
 });
 </script>

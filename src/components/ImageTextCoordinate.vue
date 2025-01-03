@@ -1,7 +1,7 @@
 <template>
   <div class="image-container" :style="imageStyle">
     <div class="image-container" :style="imageStyle">
-      <img :src="imageSrc" alt="Image" class="background-image" />
+      <img :src="imageSrc" alt="Image" class="background-image" :style="{ borderRadius: imageBorderRadius }" />
       <p :style="textStyle">{{ text }}</p>
     </div>
   </div>
@@ -24,6 +24,18 @@ export default defineComponent({
     imageHeight: {
       type: String,
       default: 'auto',
+    },
+    imageBorderRadius: {
+      type: String,
+      default: '0', // Default to no border radius
+    },
+    textFontStyle: {
+      type: String,
+      default: 'normal',
+    },
+    textFontFamily: {
+      type: String,
+      default: 'Arial, Helvetica, sans-serif;',
     },
     text: {
       type: String,
@@ -78,6 +90,8 @@ export default defineComponent({
         backgroundColor: props.textBackgroundColor,
         fontSize: props.textSize,
         padding: '4px 15px 4px 15px',
+        fontStyle: props.textFontStyle,
+        fontFamily: props.textFontFamily
       };
     });
 
