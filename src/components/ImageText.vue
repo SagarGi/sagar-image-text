@@ -79,9 +79,12 @@ export default defineComponent({
         color: props.textColor,
         fontSize: props.textSize,
         backgroundColor: props.textBackgroundColor,
-        padding: '4px 15px 4px 15px',
         fontStyle: props.textFontStyle,
-        fontFamily: props.textFontFamily
+        fontFamily: props.textFontFamily,
+        maxWidth: "96%",
+        padding: "2%",
+        wordWrap: 'break-word',
+        overflowWrap: 'break-word',
       } as CSSProperties; // Explicit cast here
     });
     const imageContainerStyle = computed<CSSProperties>(() => {

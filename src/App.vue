@@ -27,18 +27,16 @@ import "sagar-image-text/style.css";
                 image-src="sample4.jpg"
                 text="Village View"
                 text-position="center"
-                text-size="18px"
+                text-size="15px"
                 image-border-radius="10px"
-                text-font-family="Arial, Helvetica, sans-serif"
             />
             <ImageText
                 class="image-text-component"
                 image-src="sample5.jpg"
                 text="Mountain View"
                 text-position="top-right"
-                text-size="18px"
+                text-size="16px"
                 image-border-radius="10px"
-                text-font-family="Arial, Helvetica, sans-serif"
 
             />
             <ImageText
@@ -48,7 +46,6 @@ import "sagar-image-text/style.css";
                 text-position="bottom-center"
                 text-size="14px"
                 image-border-radius="10px"
-                text-font-family="Arial, Helvetica, sans-serif"
             />
           </div>
         </div>
@@ -66,7 +63,6 @@ import "sagar-image-text/style.css";
                 image_x_coordinate="50"
                 image_y_coordinate="75"
                 image-border-radius="10px"
-                text-font-family="Arial, Helvetica, sans-serif"
             />
             <ImageTextCoordinate
                 class="image-text-component"
@@ -75,7 +71,6 @@ import "sagar-image-text/style.css";
                 text-size="18px"
                 image_x_coordinate="50"
                 image-border-radius="10px"
-                text-font-family="Arial, Helvetica, sans-serif"
             />
           </div>
         </div>
