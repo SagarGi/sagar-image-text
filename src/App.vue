@@ -64,10 +64,7 @@ import "sagar-image-text/style.css";
                 text="Fishtail (6999m)"
                 text-size="18px"
                 image_x_coordinate="50"
-                image_y_coordinate="79"
-                text-background-width="90"
-                image-width="80%"
-                image-height="250px"
+                image_y_coordinate="75"
                 image-border-radius="10px"
                 text-font-family="Arial, Helvetica, sans-serif"
             />
@@ -77,9 +74,6 @@ import "sagar-image-text/style.css";
                 text="Heaven on Earth is Nepal"
                 text-size="18px"
                 image_x_coordinate="50"
-                text-background-width="90"
-                image-width="80%"
-                image-height="250px"
                 image-border-radius="10px"
                 text-font-family="Arial, Helvetica, sans-serif"
             />
@@ -162,6 +156,10 @@ h3 {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: center;
+}
+
+.component {
+  color: #ff91ea;
 }
 
 .image-text-component {

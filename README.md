@@ -1,5 +1,5 @@
 <p align="center">
-	<img src="docs/sit.svg" width="80">
+	<img src="docs/big-sit.svg" width="80">
 </p>
 <h1 align=center>Sagar Image Text</h1>
 <p align=center>Make your Text on Image Easier</p>
@@ -84,12 +84,12 @@ Component `ImageText` has the following props:
 Component `ImageTextCoordinate` has same props as above but with extra props as:
 
 
-| Prop        | Type          | Default | Description                                                  |
-|-------------|---------------|----|--------------------------------------------------------------|
-| `image_x_coordinate` | `Number`      | `50` | x-positon to place the text on image.                        |
-| `image_y_coordinate` | `Number`      | `50` | xypositon to place the text on image.                        |
+| Prop        | Type          | Default  | Description                                                  |
+|-------------|---------------|----------|--------------------------------------------------------------|
+| `image_x_coordinate` | `Number`      | `50`     | x-positon to place the text on image.                        |
+| `image_y_coordinate` | `Number`      | `50`     | xypositon to place the text on image.                        |
 | `textAlign` | `String`     | `center` | Also allows to align the position of the text on an overlay. |
-| `textBackgroundWidth` | `Number`     |    | Width of the text background.                                |
+| `textBackgroundWidth` | `Number`     | `number` | Width of the text background.                                |
 
 
 

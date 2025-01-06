@@ -55,6 +55,7 @@ export default defineComponent({
     },
     textBackgroundWidth: {
       type: Number,
+      default: "100"
     },
     textColor: {
       type: String,
@@ -85,13 +86,17 @@ export default defineComponent({
         top: `${constrainedYImageCoordinate.value}%`,
         transform: 'translate(-50%, -50%)',
         textAlign: props.textAlign as CSSProperties['textAlign'],
+        maxWidth: "100%", // Ensures the text won't exceed 90% of the image width
         width: `${props.textBackgroundWidth}%`,
         color: props.textColor,
         backgroundColor: props.textBackgroundColor,
-        fontSize: props.textSize,
-        padding: '4px 15px 4px 15px',
+        fontSize: `${props.textSize}px`,
+        paddingTop: "5px",
+        paddingBottom: "5px",
         fontStyle: props.textFontStyle,
-        fontFamily: props.textFontFamily
+        fontFamily: props.textFontFamily,
+        wordWrap: 'break-word',
+        overflowWrap: 'break-word',
       };
     });
 
