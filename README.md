@@ -15,11 +15,11 @@
 
 ##  1. Library usage example
 
-https://sagargi.github.io/sagar-text-image
+https://sagargi.github.io/sagar-image-text
 
 ## 2. Installation
 
-SagarTextImage is available on NPM. You can install it using the following command:
+SagarImageText is available on NPM. You can install it using the following command:
 
 ```
 npm install sagar-text-image
@@ -65,31 +65,31 @@ Also, here is an example of component `ImageTextCoordinate` which is more flexib
 ## 4. Props
 Component `ImageText` has the following props:
 
-| Prop        | Type          | Default              | Description                                                                                                  |
-|-------------|---------------|----------------------|--------------------------------------------------------------------------------------------------------------|
-| `imageSrc` | `String`      | `required`           | Path of the image.                                                                                           |
-| `imageWidth` | `String`      | `100%`               | Width of the image.                                                                                          |
-| `imageHeight` | `String`     | `auto`               | Height of the image.                                                                                         |
-| `text` | `String`       | `your text here`     | Text you want to display.                                                                                    |
-| `textColor` | `String`      | `white`              | Color of the text on image.                                                                                  |
-| `textSize` | `String`     | `10px`               | Font size of the text on image.                                                                              |
-| `textPosition` | `String`       | `center`             | Position to keep the text. (top-left, top-right,top-center,bottom-left,bottom-right, bottom-center, center ) |
-| `textBackgroundColor` | `String`      | `rgba(0, 0, 0, 0.5)` | Background of the text                                                                                       |
-| `imageBorderRadius` | `String`      | `0px`                | Color of the text on image.                                                                                  |
-| `textFontStyle` | `String`      | `Arial, Helvetica, sans-serif;`              | Color of the text on image.                                                                                  |
-| `textFontFamily` | `String`      | `normal`              | Color of the text on image.                                                                                  |
+| Prop        | Type          | Default              | Description                                                                                                    |
+|-------------|---------------|----------------------|----------------------------------------------------------------------------------------------------------------|
+| `imageSrc` | `String`      | `required`           | Path to the source of the image.                                                                               |
+| `imageWidth` | `String`      | `100%`               | Width of the image.                                                                                            |
+| `imageHeight` | `String`     | `auto`               | Height of the image.                                                                                           |
+| `text` | `String`       | `your text here`     | Text you want to display.                                                                                      |
+| `textColor` | `String`      | `white`              | Color of the text on image.                                                                                    |
+| `textSize` | `String`     | `10px`               | Font size of the text on image.                                                                                |
+| `textPosition` | `String`       | `center`             | Position to keep the text. (top-left, top-right, top-center,bottom-left, bottom-right, bottom-center, center ) |
+| `textBackgroundColor` | `String`      | `rgba(0, 0, 0, 0.5)` | Background of the text                                                                                         |
+| `imageBorderRadius` | `String`      | `0px`                | Set the border radius of the image.                                                                            |
+| `textFontStyle` | `String`      | `Arial, Helvetica, sans-serif;`              | Set the font style for the text on image.                                                                      |
+| `textFontFamily` | `String`      | `normal`              | Set the font for the text on image.                                                                            |
 
 
 
 Component `ImageTextCoordinate` has same props as above but with extra props as:
 
 
-| Prop        | Type          | Default  | Description                                                  |
-|-------------|---------------|----------|--------------------------------------------------------------|
-| `image_x_coordinate` | `Number`      | `50`     | x-positon to place the text on image.                        |
-| `image_y_coordinate` | `Number`      | `50`     | xypositon to place the text on image.                        |
-| `textAlign` | `String`     | `center` | Also allows to align the position of the text on an overlay. |
-| `textBackgroundWidth` | `Number`     | `number` | Width of the text background.                                |
+| Prop        | Type          | Default  | Description                                                                           |
+|-------------|---------------|----------|---------------------------------------------------------------------------------------|
+| `image_x_coordinate` | `Number`      | `50`     | x-positon to place the text on image.                                                 |
+| `image_y_coordinate` | `Number`      | `50`     | y-positon to place the text on image.                                                 |
+| `textAlign` | `String`     | `center` | Also allows to align the position of the text on an overlay (left, right and center). |
+| `textBackgroundWidth` | `Number`     | `number` | Width of the text background.                                                         |
 
 
 
