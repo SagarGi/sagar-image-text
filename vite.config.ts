@@ -30,7 +30,7 @@ export default defineConfig(({command, mode}) => {
       }
     } else {
       return {
-        base: "/sagar-text-image/",
+        base: "/sagar-image-text/",
         plugins: [vue()],
         build: {
           outDir: "docs",
