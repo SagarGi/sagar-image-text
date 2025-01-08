@@ -22,7 +22,7 @@ https://sagargi.github.io/sagar-image-text
 SagarImageText is available on NPM. You can install it using the following command:
 
 ```
-npm install sagar-text-image
+npm i sagar-image-text
 ```
 After installing the package, you import and directly use it on you vue code as:
 
