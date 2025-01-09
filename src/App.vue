@@ -48,10 +48,13 @@ const codeSnippetImageTextCoordinate = ref([
     <div class="centered-container">
       <div class="main-wrapper">
         <div class="introduction-section">
-          <h1>Text Image: Usage and Demo</h1>
-          <div class="npm-install-div">
-            <i class="npm-icon">&ndash;&nbsp;</i> npm i sagar-text-image
-          </div>
+          <h1>Sagar Image Text - {...} Examples</h1>
+          <VCodeBlock
+              class="npm-install-snippet"
+              code="npm i sagar-image-text"
+              highlightjs="false"
+              theme="idea"
+          />
           <p>
             <span><b>"sagar-text-image"</b></span> is a simple Vue library that enables you to place text anywhere on an image, making it easy to style text on images.
           </p>
@@ -77,7 +80,7 @@ const codeSnippetImageTextCoordinate = ref([
                   highlightjs="false"
                   lang="html"
                   codeBlockRadius="5px"
-                  theme="default"
+                  theme="idea"
               />
             </div>
             <div class="image-text-component">
@@ -95,7 +98,7 @@ const codeSnippetImageTextCoordinate = ref([
                   highlightjs="false"
                   lang="html"
                   codeBlockRadius="5px"
-                  theme="default"
+                  theme="idea"
               />
             </div>
             <div class="image-text-component">
@@ -113,7 +116,7 @@ const codeSnippetImageTextCoordinate = ref([
                   highlightjs="false"
                   lang="html"
                   codeBlockRadius="5px"
-                  theme="default"
+                  theme="idea"
               />
             </div>
           </div>
@@ -140,7 +143,7 @@ const codeSnippetImageTextCoordinate = ref([
                   highlightjs="false"
                   lang="html"
                   codeBlockRadius="5px"
-                  theme="default"
+                  theme="idea"
               />
             </div>
             <div class="image-text-component">
@@ -158,7 +161,7 @@ const codeSnippetImageTextCoordinate = ref([
                   highlightjs="false"
                   lang="html"
                   codeBlockRadius="5px"
-                  theme="default"
+                  theme="idea"
               />
             </div>
           </div>
@@ -198,6 +201,11 @@ html, body {
   box-sizing: border-box;
   text-align: center;
 }
+.introduction-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .introduction-section h1 {
   font-family: "Roboto", sans-serif;
@@ -225,19 +233,15 @@ html, body {
   text-align: left;
 }
 
+.npm-install-snippet {
+  margin-top: 20px;
+  text-align: center;
+  width: 40%;
+}
+
 h3 {
   font-family: "Roboto", sans-serif;
   color: #5d5d5d;
-}
-
-.npm-install-div {
-  display: inline-flex;
-  align-items: center;
-  padding: 8px 16px;
-  background-color: #09502b;
-  color: white;
-  border-radius: 8px;
-  font-size: clamp(0.8rem, 2vw, 1rem);
 }
 
 .image-text-wrapper--imagetext-components {
